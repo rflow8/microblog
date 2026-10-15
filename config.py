@@ -18,7 +18,7 @@ class Config:
     MAIL_USE_TLS = os.getenv('MAIL_USE_TLS') is not None
     MAIL_USERNAME = os.getenv('MAIL_USERNAME')
     MAIL_PASSWORD = os.getenv('MAIL_PASSWORD')
-    ADMINS = ['saint.flow001@gmail.com'] # noqa: RUF012
+    ADMINS = ['youremail@example.com'] # noqa: RUF012
     POSTS_PER_PAGE = 8
     LANGS = ['en', 'sw']  # noqa: RUF012
     MS_TRANSLATOR_KEY = os.getenv('MS_TRANSLATOR_KEY')
