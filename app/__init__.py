@@ -1,5 +1,7 @@
 import logging  # noqa: I001
 from logging.handlers import RotatingFileHandler, SMTPHandler # dictate where logs are sent
+from redis import Redis
+import rq
 import os
 
 from flask import Flask, request, current_app
@@ -22,7 +24,7 @@ def get_locale():
 db = SQLAlchemy() # represents the database
 migrate = Migrate() # database migration engine
 login = LoginManager()
-login.login_view = 'login' # type: ignore
+login.login_view = 'auth.login' # type: ignore
 login.login_message = _l('Please log in to access this page.') # type: ignore
 mail = Mail()
 moment = Moment() # for local time
@@ -42,6 +44,8 @@ def create_app(config_class=Config): # constructs a Flask application instance, 
     babel.init_app(app, locale_selector=get_locale)
     app.elasticsearch = Elasticsearch([app.config['ELASTICSEARCH_URL']]) \
         if app.config['ELASTICSEARCH_URL'] else None
+    app.redis = Redis.from_url(app.config['REDIS_URL'])
+    app.task_queue = rq.Queue('microblog-tasks', connection=app.redis)
 
     # blueprint registeration
     from app.errors import bp as errors_bp
@@ -55,6 +59,9 @@ def create_app(config_class=Config): # constructs a Flask application instance, 
 
     from app.cli import bp as cli_bp
     app.register_blueprint(cli_bp)
+
+    from app.api import bp as api_bp
+    app.register_blueprint(api_bp, url_prefix='/api')
 
     if not app.debug and app.testing: # when app is not in debug mode, in production or in unit tests
         if app.config['MAIL_SERVER']: # when the email server exists

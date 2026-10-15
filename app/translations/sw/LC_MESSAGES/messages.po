@@ -1,171 +1,208 @@
 # Swahili translations for Microblog.
 # Copyright (C) 2026 ORGANIZATION
-# This file is distributed under the same license as the PROJECT project.
+# This file is distributed under the same license as the  project.
 # Translator: Your Name <your-email@example.com>, 2026.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Microblog\n"
+"Project-Id-Version:  Microblog\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-08-31 19:09+0300\n"
+"POT-Creation-Date: 2026-10-07 19:03+0300\n"
 "PO-Revision-Date: 2026-08-31 19:09+0300\n"
 "Last-Translator: YOUR NAME <your-email@example.com>\n"
-"Language-Team: Swahili <sw@li.org>\n"
 "Language: sw\n"
+"Language-Team: Swahili <sw@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.18.0\n"
 
-#: app/__init__.py:27
+#: app/__init__.py:28
 msgid "Please log in to access this page."
 msgstr "Tafadhali ingia ili kupata ukurasa huu."
 
-#: app/email.py:20
+#: app/translate.py:9
+msgid "Error: the translation service is not configured."
+msgstr ""
+
+#: app/translate.py:20
+msgid "Error: the translation service failed."
+msgstr ""
+
+#: app/auth/email.py:8
 msgid "[Microblog] Reset Your Password"
 msgstr "[Microblog] Weka Upya Nenosiri Lako"
 
-#: app/forms.py:11 app/forms.py:18 app/forms.py:49
+#: app/auth/forms.py:11 app/auth/forms.py:17 app/main/forms.py:12
 msgid "Username"
 msgstr "Jina la Mtumiaji"
 
-#: app/forms.py:12 app/forms.py:20 app/forms.py:43
+#: app/auth/forms.py:12 app/auth/forms.py:19 app/auth/forms.py:36
 msgid "Password"
 msgstr "Nenosiri"
 
-#: app/forms.py:13
+#: app/auth/forms.py:13
 msgid "Remember Me"
 msgstr "Nikumbuke"
 
-#: app/forms.py:14 app/routes.py:71 app/templates/login.html:5
+#: app/auth/forms.py:14 app/auth/routes.py:34 app/templates/auth/login.html:5
 msgid "Sign In"
 msgstr "Ingia"
 
-#: app/forms.py:19 app/forms.py:38
+#: app/auth/forms.py:18 app/auth/forms.py:41
 msgid "Email"
 msgstr "Barua Pepe"
 
-#: app/forms.py:21 app/forms.py:44
+#: app/auth/forms.py:20 app/auth/forms.py:37
 msgid "Repeat Password"
 msgstr "Rudia Nenosiri"
 
-#: app/forms.py:22 app/routes.py:92 app/templates/register.html:5
+#: app/auth/forms.py:21 app/auth/routes.py:55
+#: app/templates/auth/register.html:5
 msgid "Register"
 msgstr "Jisajili"
 
-#: app/forms.py:28 app/forms.py:63
+#: app/auth/forms.py:27 app/main/forms.py:26
 msgid "Please use a different username."
 msgstr "Tafadhali tumia jina lingine la mtumiaji."
 
-#: app/forms.py:34
+#: app/auth/forms.py:33
 msgid "Please use a different email address."
 msgstr "Tafadhali tumia barua pepe lingine."
 
-#: app/forms.py:39 app/forms.py:45
+#: app/auth/forms.py:38 app/auth/forms.py:42
 msgid "Request Password Reset"
 msgstr "Omba Kuweka Upya Nenosiri"
 
-#: app/forms.py:50
-msgid "About me"
-msgstr "Kunihusu"
-
-#: app/forms.py:51 app/forms.py:70
-msgid "Submit"
-msgstr "Wasilisha"
-
-#: app/forms.py:69
-msgid "Say something"
-msgstr "Sema kitu"
-
-#: app/routes.py:31
-msgid "Your post is now live!"
-msgstr "Ujumbe wako umetumwa!"
-
-#: app/routes.py:39 app/templates/base.html:27
-msgid "Home"
-msgstr "Nyumbani"
-
-#: app/routes.py:52 app/templates/base.html:30
-msgid "Explore"
-msgstr "Gundua"
-
-#: app/routes.py:64
+#: app/auth/routes.py:27
 msgid "Invalid username or password"
 msgstr "Jina la mtumiaji au nenosiri si sahihi"
 
-#: app/routes.py:90
+#: app/auth/routes.py:53
 msgid "Congratulations, you are now a registered user!"
 msgstr "Hongera, sasa wewe ni mtumiaji aliyesajiliwa!"
 
-#: app/routes.py:105
+#: app/auth/routes.py:68
 msgid "Check your email for the instructions to reset your password"
 msgstr "Angalia barua pepe yako kwa maelekezo ya kuweka upya nenosiri lako"
 
-#: app/routes.py:107 app/templates/reset_password_request.html:5
+#: app/auth/routes.py:70 app/templates/auth/reset_password_request.html:5
 msgid "Reset Password"
 msgstr "Weka Upya Nenosiri"
 
-#: app/routes.py:121
+#: app/auth/routes.py:84
 msgid "Your password has been reset."
 msgstr "Nenosiri lako limewekwa upya."
 
-#: app/routes.py:152
+#: app/main/forms.py:13
+msgid "About me"
+msgstr "Kunihusu"
+
+#: app/main/forms.py:14 app/main/forms.py:33 app/main/forms.py:47
+msgid "Submit"
+msgstr "Wasilisha"
+
+#: app/main/forms.py:32
+msgid "Say something"
+msgstr "Sema kitu"
+
+#: app/main/forms.py:36 app/main/routes.py:156
+#, fuzzy
+msgid "Search"
+msgstr "Mtumiaji"
+
+#: app/main/forms.py:46
+msgid "Message"
+msgstr ""
+
+#: app/main/routes.py:40
+msgid "Your post is now live!"
+msgstr "Ujumbe wako umetumwa!"
+
+#: app/main/routes.py:48 app/templates/base.html:27
+msgid "Home"
+msgstr "Nyumbani"
+
+#: app/main/routes.py:61 app/templates/base.html:30
+msgid "Explore"
+msgstr "Gundua"
+
+#: app/main/routes.py:95
 msgid "Your changes have been saved."
 msgstr "Mabadiliko yako yamehifadhiwa."
 
-#: app/routes.py:157 app/templates/edit_profile.html:5
+#: app/main/routes.py:100 app/templates/edit_profile.html:5
 msgid "Edit Profile"
 msgstr "Hariri Wasifu"
 
-#: app/routes.py:168 app/routes.py:189
+#: app/main/routes.py:111 app/main/routes.py:132
 #, python-format
 msgid "User %(username)s not found."
 msgstr "Mtumiaji %(username)s hapatikani."
 
-#: app/routes.py:171
+#: app/main/routes.py:114
 msgid "You cannot follow yourself!"
 msgstr "Huwezi kujifuata mwenyewe!"
 
-#: app/routes.py:175
+#: app/main/routes.py:118
 #, python-format
 msgid "You are following %(username)s!"
 msgstr "Unamfuata %(username)s!"
 
-#: app/routes.py:192
+#: app/main/routes.py:135
 msgid "You cannot unfollow yourself!"
 msgstr "Huwezi kujifuta mwenyewe!"
 
-#: app/routes.py:196
+#: app/main/routes.py:139
 #, python-format
 msgid "You are not following %(username)s."
 msgstr "Humfuati %(username)s."
 
-#: app/templates/404.html:4
-msgid "Not Found"
-msgstr "Haipatikani"
+#: app/main/routes.py:177
+#, fuzzy
+msgid "Your message has been sent."
+msgstr "Nenosiri lako limewekwa upya."
 
-#: app/templates/404.html:5
-msgid "Back"
-msgstr "Nyuma"
+#: app/main/routes.py:179
+msgid "Send Message"
+msgstr ""
 
-#: app/templates/_post.html:14
+#: app/main/routes.py:214
+msgid "An export task is currently in progress"
+msgstr ""
+
+#: app/main/routes.py:216
+msgid "Exporting posts..."
+msgstr ""
+
+#: app/templates/_post.html:15
 #, python-format
 msgid "%(username)s said %(when)s"
 msgstr "%(username)s alisema %(when)s"
 
+#: app/templates/_post.html:22
+msgid "Translate"
+msgstr ""
+
 #: app/templates/base.html:9
+#, fuzzy
 msgid "Welcome to Microblog"
 msgstr "Karibu kwenye Microblog"
 
-#: app/templates/base.html:36
+#: app/templates/base.html:43
 msgid "Login"
 msgstr "Ingia"
 
-#: app/templates/base.html:40
+#: app/templates/base.html:47 app/templates/messages.html:4
+msgid "Messages"
+msgstr ""
+
+#: app/templates/base.html:57
 msgid "Profile"
 msgstr "Wasifu"
 
-#: app/templates/base.html:43
+#: app/templates/base.html:60
 msgid "Logout"
 msgstr "Toka"
 
@@ -186,48 +223,49 @@ msgstr "Furahini katika Bwana"
 msgid "Again I say rejoice"
 msgstr "Nasema tena furahini"
 
-#: app/templates/index.html:19 app/templates/user.html:41
+#: app/templates/index.html:19 app/templates/search.html:12
+#: app/templates/user.html:47
 msgid "Newer posts"
 msgstr "Machapisho mapya zaidi"
 
-#: app/templates/index.html:24 app/templates/user.html:46
+#: app/templates/index.html:24 app/templates/search.html:17
+#: app/templates/user.html:52
 msgid "Older posts"
 msgstr "Machapisho ya zamani zaidi"
 
-#: app/templates/login.html:7
-msgid "New User >>>"
-msgstr "Mtumiaji Mpya >>>"
+#: app/templates/messages.html:12
+#, fuzzy
+msgid "Newer messages"
+msgstr "Machapisho mapya zaidi"
 
-#: app/templates/login.html:7
-msgid "Click to Register!"
-msgstr "Bonyeza kujisajili!"
+#: app/templates/messages.html:17
+#, fuzzy
+msgid "Older messages"
+msgstr "Machapisho ya zamani zaidi"
 
-#: app/templates/login.html:8
-msgid "Forgot Your Password?"
-msgstr "Umesahau Nenosiri Lako?"
+#: app/templates/search.html:4
+msgid "Search Results"
+msgstr ""
 
-#: app/templates/login.html:8
-msgid "Click to Reset It"
-msgstr "Bonyeza Kuweka Upya"
-
-#: app/templates/reset_password.html:5
-msgid "Reset Your Password"
-msgstr "Weka Upya Nenosiri Lako"
+#: app/templates/send_message.html:5
+#, python-format
+msgid "Send Message to %(recipient)s"
+msgstr ""
 
 #: app/templates/user.html:8
 msgid "User"
 msgstr "Mtumiaji"
 
-#: app/templates/user.html:11
+#: app/templates/user.html:11 app/templates/user_popup.html:7
 msgid "Last seen on"
 msgstr "Mara ya mwisho kuonekana"
 
-#: app/templates/user.html:13
+#: app/templates/user.html:13 app/templates/user_popup.html:9
 #, python-format
 msgid "%(count)d followers"
 msgstr "%(count)d wafuasi"
 
-#: app/templates/user.html:13
+#: app/templates/user.html:13 app/templates/user_popup.html:9
 #, python-format
 msgid "%(count)d following"
 msgstr "%(count)d wanafuatwa"
@@ -236,10 +274,56 @@ msgstr "%(count)d wanafuatwa"
 msgid "Edit your profile"
 msgstr "Hariri wasifu wako"
 
-#: app/templates/user.html:20
+#: app/templates/user.html:17
+#, fuzzy
+msgid "Export your posts"
+msgstr "Umesahau Nenosiri Lako?"
+
+#: app/templates/user.html:23 app/templates/user_popup.html:15
 msgid "Follow"
 msgstr "Fuata"
 
-#: app/templates/user.html:27
+#: app/templates/user.html:30 app/templates/user_popup.html:22
 msgid "Unfollow"
 msgstr "Usifuate"
+
+#: app/templates/user.html:35
+msgid "Send private message"
+msgstr ""
+
+#: app/templates/auth/login.html:7
+msgid "New User >>>"
+msgstr "Mtumiaji Mpya >>>"
+
+#: app/templates/auth/login.html:7
+msgid "Click to Register!"
+msgstr "Bonyeza kujisajili!"
+
+#: app/templates/auth/login.html:8
+msgid "Forgot Your Password?"
+msgstr "Umesahau Nenosiri Lako?"
+
+#: app/templates/auth/login.html:8
+msgid "Click to Reset It"
+msgstr "Bonyeza Kuweka Upya"
+
+#: app/templates/auth/reset_password.html:5
+msgid "Reset Your Password"
+msgstr "Weka Upya Nenosiri Lako"
+
+#: app/templates/errors/404.html:4
+msgid "Not Found"
+msgstr "Haipatikani"
+
+#: app/templates/errors/404.html:5 app/templates/errors/500.html:6
+msgid "Back"
+msgstr "Nyuma"
+
+#: app/templates/errors/500.html:4
+msgid "An unexpected error has occurred"
+msgstr ""
+
+#: app/templates/errors/500.html:5
+msgid "Ze administrator has been notified. Sorry for ze inconvenience!🫶🏾"
+msgstr ""
+
